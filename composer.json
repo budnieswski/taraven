@@ -10,6 +10,7 @@
             "email": "budnieswski@gmail.com"
         }
     ],
+    "minimum-stability": "1.0.0",
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
