@@ -1,7 +1,7 @@
 {
     "name": "budnieswski/taraven",
     "description": "Wordpress theme skeleton",
-    "type": "package",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
