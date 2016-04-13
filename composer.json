@@ -3,6 +3,7 @@
     "description": "Wordpress theme skeleton",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Budnieswski",
