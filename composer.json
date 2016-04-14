@@ -23,7 +23,6 @@
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
-        "classmap": [ "vendor/timber" ],
         "psr-0": {
             "Taraven": "src/"
         }
