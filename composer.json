@@ -10,7 +10,6 @@
             "email": "budnieswski@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "repositories": [
       {
         "type": "composer",
