@@ -3,7 +3,7 @@ namespace Taraven\Wordpress\Cleaner;
 
 class Header
 {
-    public function hello()
+    public static function hello()
     {
       return "Cleaner Header<br>";
       // return true;
