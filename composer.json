@@ -10,12 +10,27 @@
             "email": "budnieswski@gmail.com"
         }
     ],
-    "minimum-stability": "1.0.0",
-    "require": {},
+    "minimum-stability": "dev",
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      }
+    ],
+    "extra": {
+        "installer-paths": {
+          "vendor/timber-library": ["wpackagist-plugin/timber-library"]
+        }
+    },
+    "require": {
+        "wpackagist-plugin/timber-library": "^0.22.5",
+        "matthiasmullie/minify": "^1.3"
+    },
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
+        "classmap": [ "vendor/timber-library" ],
         "psr-0": {
             "Taraven": "src/"
         }
