@@ -10,27 +10,9 @@
             "email": "budnieswski@gmail.com"
         }
     ],
-    "repositories": [
-      {
-        "type": "composer",
-        "url": "https://wpackagist.org"
-      },
-      {
-        "type": "package",
-        "package": {
-          "name": "timber/timber",
-          "version": "dev-master",
-          "source": {
-            "type": "git",
-            "url": "https://github.com/timber/timber.git",
-            "reference": "master"
-          }
-        }
-      }
-    ],
     "require": {
-        "timber/timber": "dev-master",
-        "matthiasmullie/minify": "^1.3"
+        "matthiasmullie/minify": "^1.3",
+        "jarednova/timber": "^0.22.6"
     },
     "require-dev": {
         "phpunit/phpunit": "4.0.*"
@@ -38,6 +20,11 @@
     "autoload": {
         "psr-0": {
             "Taraven": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+          "vendor/timber": ["jarednova/timber"]
         }
     }
 }
