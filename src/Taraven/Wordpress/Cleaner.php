@@ -5,7 +5,7 @@ use Taraven\Wordpress\Cleaner\Header;
 
 class Cleaner
 {
-    public function hello()
+    public static function hello()
     {
       echo Header::hello();
       return "Cleaner fucking trash WP<br>";
