@@ -3,26 +3,27 @@
     "description": "Wordpress theme skeleton",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Budnieswski",
             "email": "budnieswski@gmail.com"
         }
     ],
+    "minimum-stability": "1.0.0",
+    "extra": {
+        "installer-paths": {
+          "vendor/timber-library": ["wpackagist-plugin/timber-library"]
+        }
+    },
     "repositories": [
       {
         "type": "composer",
         "url": "https://wpackagist.org"
       }
     ],
-    "extra": {
-        "installer-paths": {
-          "vendor/timber-library": ["wpackagist-plugin/timber-library"]
-        }
-    },
     "require": {
-        "wpackagist-plugin/timber-library": "^0.22",
+        "wpackagist-plugin/timber-library": "0.22.5",
         "matthiasmullie/minify": "^1.3"
     },
     "require-dev": {
