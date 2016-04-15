@@ -34,7 +34,7 @@ class Setting
   {
     $this->settings = $this->merge($settings);
 
-    return $this->settings;
+    return $this;
   }
 
 
@@ -42,7 +42,7 @@ class Setting
    * Get current settings
    * @return [array] 
    */
-  public function getSettings()
+  public final function getSettings()
   {
     return $this->settings;
   }
