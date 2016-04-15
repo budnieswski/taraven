@@ -1,9 +1,13 @@
 <?php
 namespace Taraven;
 
+
 use Timber;
+use Taraven\Setting;
+
 
 global $timber;
+
 
 class Bootstrap
 {
@@ -21,49 +25,8 @@ class Bootstrap
     $timber = new Timber();
     Timber::$dirname = 'views';
 
-    $this->settingsMerge($settings);
-  }
-
-
-  /**
-   * Merge user settings with default settings
-   * @param  [array] $settings [description]
-   * @return [type]           [description]
-   */
-  private function settingsMerge($settings)
-  {
-    $defaultSettings = array(
-      'css'             => array(),
-      'js'              => array(),
-      'menu'            => array(),
-      'acf'             => array(),
-      'google-maps'     => true,
-      'google-jquery'   => true,
-      'blog'            => false,
-    );
-
-    if( is_array($settings) ):
-      foreach ($settings AS $key => $value)
-      {
-        if( is_array($value) )
-          $defaultSettings[$key] = array_merge($defaultSettings[$key], $value);
-        else
-          $defaultSettings[$key] = $value;
-      }
-    endif;
-
-    $this->settings = $defaultSettings;
-    return;
-  }
-
-
-  /**
-   * Get current settings
-   * @return [array] 
-   */
-  public function getSettings()
-  {
-    return $this->settings;
+    // Processing settings
+    $this->settings = Taraven\Setting($settings);
   }
 
 }
