@@ -38,7 +38,7 @@ class Bootstrap
     if( !is_array($settings) && $data !== '' )
       $settings = array( $settings => $data );
     
-    $this->setSettings( $this->settings );
+    $this->setSettings( $settings );
   }
 
 
