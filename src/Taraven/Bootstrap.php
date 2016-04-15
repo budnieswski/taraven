@@ -24,6 +24,9 @@ class Bootstrap
 
     // Processing settings & use Setting Object
     $this->setSettings( new Setting($settings) );
+
+    new Wordpress\EnqueueStyles($this->settings);
+    new Wordpress\EnqueueScripts($this->settings);
   }
 
 
