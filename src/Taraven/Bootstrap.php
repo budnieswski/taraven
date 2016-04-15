@@ -23,8 +23,7 @@ class Bootstrap
     Timber::$dirname = 'views';
 
     // Processing settings & use Setting Object
-    $this->settings = new Setting($settings);
-    $this->setSettings( $this->settings );
+    $this->setSettings( new Setting($settings) );
   }
 
 
@@ -38,8 +37,7 @@ class Bootstrap
   {
     if( !is_array($settings) && $data !== '' )
       $settings = array( $settings => $data );
-
-    $this->settings = $this->settings->setSettings($settings);
+    
     $this->setSettings( $this->settings );
   }
 
@@ -55,12 +53,17 @@ class Bootstrap
 
 
   /**
-   * Put settings into Timber Context
+   * Store Setting and put settings into Timber Context
+   * @param  Setting Object/Array $settings [<description>]
    * @return [array] 
    */
   private function setSettings($settings)
   {
-    //
+    if( is_object($settings) )
+      $this->settings = $settings;
+
+    else if( is_array($settings) )
+      $this->settings = $this->settings->setSettings($settings);
   }
 
 }

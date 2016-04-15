@@ -28,7 +28,7 @@ class Setting
 
   /**
    * Set settings
-   * @return [array] 
+   * @return This class
    */
   public function setSettings($settings)
   {
