@@ -22,11 +22,23 @@ class Bootstrap
     $timber = new Timber();
     Timber::$dirname = 'views';
 
+    echo "<pre>";
+    print_r(Timber);
+    echo "</pre>";
+
     // Processing settings & use Setting Object
     $this->setSettings( new Setting($settings) );
 
     new Wordpress\EnqueueStyles($this->settings);
     new Wordpress\EnqueueScripts($this->settings);
+
+    // Loading filters
+    new Wordpress\Filter\PostGallery();
+    // new Wordpress\Filter\BodyClass();
+    new Wordpress\Filter\SanitizeFileName();
+
+    // Initializing Taraven
+    $taraven = new Taraven($this->settings);
   }
 
 
@@ -68,5 +80,4 @@ class Bootstrap
     else if( is_array($settings) )
       $this->settings = $this->settings->setSettings($settings);
   }
-
 }
