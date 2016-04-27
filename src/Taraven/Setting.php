@@ -9,8 +9,8 @@ class Setting
     'js'              => array(),
     'menu'            => array(),
     'acf'             => array(),
-    'google-maps'     => true,
     'google-jquery'   => true,
+    'google-maps'     => false,
     'blog'            => false,
   );
   
@@ -45,6 +45,46 @@ class Setting
   public final function getSettings()
   {
     return $this->settings;
+  }
+
+
+  /**
+   * Get CSS settings
+   * @return [array] 
+   */
+  public final function getCSS()
+  {
+    return $this->settings['css'];
+  }
+
+
+  /**
+   * Get Javascript settings
+   * @return [array] 
+   */
+  public final function getJS()
+  {
+    return $this->settings['js'];
+  }
+
+
+  /**
+   * Get Menus settings
+   * @return [array] 
+   */
+  public final function getMenu()
+  {
+    return $this->settings['menu'];
+  }
+
+
+  /**
+   * Get Advanced Custom Fields settings
+   * @return [array] 
+   */
+  public final function getACF()
+  {
+    return $this->settings['acf'];
   }
 
 
