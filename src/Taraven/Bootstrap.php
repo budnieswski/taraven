@@ -22,10 +22,6 @@ class Bootstrap
     $timber = new Timber();
     Timber::$dirname = 'views';
 
-    echo "<pre>";
-    print_r(Timber);
-    echo "</pre>";
-
     // Processing settings & use Setting Object
     $this->setSettings( new Setting($settings) );
 
